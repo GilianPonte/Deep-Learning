@@ -1,1 +1,1 @@
-# Deep-Learning
+# Deep Learning course WMAI18002
