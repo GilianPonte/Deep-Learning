@@ -100,11 +100,11 @@ class GAN():
         model.add(UpSampling2D())
         model.add(Conv2D(128, kernel_size=3, padding="same"))
         model.add(BatchNormalization(momentum=0.8))
-        model.add(Activation("relu"))
+        model.add(LeakyReLU(alpha=0.2))
         model.add(UpSampling2D())
         model.add(Conv2D(64, kernel_size=3, padding="same"))
         model.add(BatchNormalization(momentum=0.8))
-        model.add(Activation("relu"))
+        model.add(LeakyReLU(alpha=0.2))
         model.add(Conv2D(self.channels, kernel_size=3, padding="same"))
         model.add(Activation("tanh"))
 
